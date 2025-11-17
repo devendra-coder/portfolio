@@ -122,86 +122,84 @@ export default function App() {
 
       {/* ================= PROJECTS SECTION ================= */}
       <section id="projects" className="px-8 py-24 relative">
-        <h2 className="section-title delay-1 text-4xl font-bold mb-12 text-center 
-              bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-  Featured Projects
-</h2>
+  <h2 className="section-title delay-1 text-4xl font-bold mb-12 text-center 
+        bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+    Featured Projects
+  </h2>
 
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {[
-            {
-              title: "Data Jobs Dashboard",
-              desc: "Interactive Power BI dashboard analyzing global data jobs, salaries, skills, and hiring trends.",
-              tech: ["Power BI", "DAX", "Data Modeling"],
-              link: "https://github.com/devendra-coder/data-jobs-dashboard",
-            },
-            {
-              title: "SQL Data Analytics Project",
-              desc: "Medallion architecture project with SQL transformations, KPIs, aggregations, and end-to-end reports.",
-              tech: ["SQL Server", "Window Functions", "ETL"],
-              link: "https://github.com/devendra-coder/sql-data-analytics-project",
-            },
-            {
-              title: "SQL Data Warehouse Project",
-              desc: "Full data warehouse with star schema, fact/dimension tables, and KPI-ready data models.",
-              tech: ["SQL", "Data Warehouse", "Star Schema", "ETL"],
-              link: "https://github.com/devendra-coder/sql-data-warehouse-project",
-            },
-            {
-              title: "Excel Salary Calculator",
-              desc: "Clean Excel dashboard that predicts salaries across countries, companies, and experience levels.",
-              tech: ["Excel", "Pivot Tables", "Data Cleaning"],
-              link: "https://github.com/devendra-coder/excel-job-salary-calculator",
-            },
-            {
-              title: "Data Jobs Dataset + EDA",
-              desc: "Custom data jobs dataset with Python-based EDA, grouping, visualization, and insights.",
-              tech: ["Python", "Pandas", "Matplotlib"],
-              link: "https://github.com/devendra-coder/data-jobs",
-            },
-            {
-              title: "Front-End UI Projects",
-              desc: "Modern UI components and small interactive front-end apps built for practice.",
-              tech: ["HTML", "CSS", "JavaScript"],
-              link: "https://github.com/devendra-coder/front-end-projects",
-            },
-          ].map((project, idx) => (
-            <div
-  key={project.title}
-  className={`card reveal delay-${idx + 1} relative overflow-hidden
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+    {[
+      {
+        title: "Data Jobs Dashboard",
+        desc: "Interactive Power BI dashboard analyzing global data jobs, salaries, skills, and hiring trends.",
+        tech: ["Power BI", "DAX", "Data Modeling"],
+        link: "https://github.com/devendra-coder/data-jobs-dashboard",
+      },
+      {
+        title: "SQL Data Analytics Project",
+        desc: "Medallion architecture project with SQL transformations, KPIs, aggregations, and end-to-end reports.",
+        tech: ["SQL Server", "Window Functions", "ETL"],
+        link: "https://github.com/devendra-coder/sql-data-analytics-project",
+      },
+      {
+        title: "SQL Data Warehouse Project",
+        desc: "Full data warehouse with star schema, fact/dimension tables, and KPI-ready data models.",
+        tech: ["SQL", "Data Warehouse", "Star Schema", "ETL"],
+        link: "https://github.com/devendra-coder/sql-data-warehouse-project",
+      },
+      {
+        title: "Excel Salary Calculator",
+        desc: "Clean Excel dashboard that predicts salaries across countries, companies, and experience levels.",
+        tech: ["Excel", "Pivot Tables", "Data Cleaning"],
+        link: "https://github.com/devendra-coder/excel-job-salary-calculator",
+      },
+      {
+        title: "Data Analyst Job Market Research & Insights",
+        desc: "Python-powered analysis of 32K+ job postings revealing demand, salary trends, and optimal skills.",
+        tech: ["Python", "Pandas", "Matplotlib", "Seaborn"],
+        link: "https://github.com/devendra-coder/python-data-project",
+      },
+      {
+        title: "Data Jobs Dataset + EDA",
+        desc: "Custom data jobs dataset with Python-based EDA, grouping, visualization, and insights.",
+        tech: ["Python", "Pandas", "Matplotlib"],
+        link: "https://github.com/devendra-coder/data-jobs",
+      },
+    ].map((project, idx) => (
+      <div
+        key={project.title}
+        className={`card reveal delay-${idx + 1} relative overflow-hidden
               p-6 rounded-xl bg-[#10141f] border border-white/10`}
->
+      >
+        <h3 className="text-xl font-semibold">{project.title}</h3>
+        <p className="text-gray-400 mt-2 text-sm">{project.desc}</p>
 
-              <h3 className="text-xl font-semibold">{project.title}</h3>
-
-              <p className="text-gray-400 mt-2 text-sm">{project.desc}</p>
-
-              <div className="flex flex-wrap gap-2 mt-3">
-                {project.tech.map((t) => (
-                  <span
-                    key={t}
-                    className="px-3 py-1 text-xs rounded-full bg-white/10 text-purple-300 border border-purple-500/20"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-
-              <div className="mt-5 pt-3 border-t border-white/10">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  className="inline-block text-sm px-4 py-2 border border-purple-500/40 rounded-lg 
-                             hover:bg-purple-600 hover:border-purple-600 transition-all"
-                >
-                  View on GitHub →
-                </a>
-              </div>
-            </div>
+        <div className="flex flex-wrap gap-2 mt-3">
+          {project.tech.map((t) => (
+            <span
+              key={t}
+              className="px-3 py-1 text-xs rounded-full bg-white/10 text-purple-300 border border-purple-500/20"
+            >
+              {t}
+            </span>
           ))}
         </div>
-      </section>
+
+        <div className="mt-5 pt-3 border-t border-white/10">
+          <a
+            href={project.link}
+            target="_blank"
+            className="inline-block text-sm px-4 py-2 border border-purple-500/40 rounded-lg 
+                             hover:bg-purple-600 hover:border-purple-600 transition-all"
+          >
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* Divider */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-20"></div>
